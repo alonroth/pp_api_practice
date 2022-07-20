@@ -1,0 +1,2 @@
+      invoke  active_record
+   identical    db/migrate/20220720135946_change_default_value_of_state_in_gigs.rb
