@@ -1,6 +1,12 @@
 class CreatorsController < ApplicationController
   def create
-    
-    render json: {'a': 'asdad'}, status: 201
+
+    @creator = Creator.new(creator_params)
+
+    if @creator.save
+      render json: @creator, status: :created, location: @creator
+    else
+      render json: @creator.errors, status: :unprocessable_entity
+    end
   end
 end
