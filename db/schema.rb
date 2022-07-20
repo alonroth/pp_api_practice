@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_20_135145) do
+ActiveRecord::Schema.define(version: 2022_07_20_140710) do
 
   create_table "creators", force: :cascade do |t|
     t.string "first_name"
@@ -20,7 +20,13 @@ ActiveRecord::Schema.define(version: 2022_07_20_135145) do
   end
 
 # Could not dump table "gigs" because of following StandardError
-#   Unknown type 'has_one' for column 'payment'
+#   Unknown type '' for column 'payment'
+
+  create_table "payments", force: :cascade do |t|
+    t.string "state", default: "pending"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   add_foreign_key "gigs", "creators"
 end
