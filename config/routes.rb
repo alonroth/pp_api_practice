@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # post 'creators/create'
   resources :payments
   resources :gigs
   resources :creators
