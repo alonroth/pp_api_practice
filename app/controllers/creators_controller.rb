@@ -1,6 +1,22 @@
 class CreatorsController < ApplicationController
-  def create
 
+  def index
+    creators_query_order =
+      if params.key?('sort') & params.key?('sort_direction')
+        {params[:sort] => params[:sort_direction].to_sym}
+      else
+        params[:sort]
+      end
+    @creators = Creator.limit(params[:limit]).offset(params[:offset]).order(creators_query_order)
+    render json: @creators
+  end
+
+  def show
+    creator = Creator.find(params[:id])
+    render json: creator
+  end
+
+  def create
     @creator = Creator.new(creator_params)
 
     if @creator.save
