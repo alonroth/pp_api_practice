@@ -7,7 +7,9 @@ class GigsController < ApplicationController
 
   def show
     @gig = Gig.find(params[:id])
-    render json: @gig
+    gig_fields = GigSerializer._attributes.clone.map{|s| s.to_s} #for future proof purposes
+    gig_payment_fields = GigPaymentSerializer._attributes.clone.map{|s| s.to_s} #for future proof purposes
+    render json: @gig, fields: {'gig': gig_fields, 'gig-payment': gig_payment_fields}, include: params[:include]
   end
 
   def create

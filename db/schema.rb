@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_20_140710) do
+ActiveRecord::Schema.define(version: 2022_07_25_133528) do
 
   create_table "creators", force: :cascade do |t|
     t.string "first_name"
@@ -19,14 +19,30 @@ ActiveRecord::Schema.define(version: 2022_07_20_140710) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-# Could not dump table "gigs" because of following StandardError
-#   Unknown type '' for column 'payment'
-
-  create_table "payments", force: :cascade do |t|
+  create_table "gig_payments", force: :cascade do |t|
     t.string "state", default: "pending"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "gig_id", null: false
+  end
+
+  create_table "gigs", force: :cascade do |t|
+    t.string "brand_name"
+    t.string "state", default: "applied"
+    t.integer "creator_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "gig_payment_id", null: true
+    t.index ["creator_id"], name: "index_gigs_on_creator_id"
+  end
+
+  create_table "testings", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "gigs", "creators"
+  add_foreign_key "gigs", "creators", primary_key: "id"
+  add_foreign_key "gigs", "gig_payments", primary_key: "id"
 end
