@@ -1,3 +1,3 @@
 class GigPayment < ApplicationRecord
-  has_one :gig
+  belongs_to :gig
 end
