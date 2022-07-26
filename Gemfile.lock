@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.11.1)
     actioncable (6.0.5.1)
       actionpack (= 6.0.5.1)
       nio4r (~> 2.0)
@@ -155,6 +156,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  aasm
   active_model_serializers (~> 0.10.0)
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
