@@ -1,5 +1,6 @@
 class Gig < ApplicationRecord
   include AASM
+
   belongs_to :creator
   has_one :gig_payment
 
@@ -12,6 +13,10 @@ class Gig < ApplicationRecord
       after do
         self.create_gig_payment
       end
+    end
+
+    event :paid do
+      transitions from: [:completed], to: :paid
     end
   end
 
