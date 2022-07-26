@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2022_07_25_133528) do
     t.integer "creator_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "gig_payment_id", null: true
     t.index ["creator_id"], name: "index_gigs_on_creator_id"
   end
 
@@ -44,5 +43,4 @@ ActiveRecord::Schema.define(version: 2022_07_25_133528) do
   end
 
   add_foreign_key "gigs", "creators", primary_key: "id"
-  add_foreign_key "gigs", "gig_payments", primary_key: "id"
 end
