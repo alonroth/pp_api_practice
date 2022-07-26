@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 2.minutes do
-  GigPayment.update_all({:state => 'complete'}, {:state => 'pending'}) # TODO: Change to constants
+  runner "GigPayment.update_pending_gig_payments_to_complete"
 end
