@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_26_135403) do
+ActiveRecord::Schema.define(version: 2022_07_26_145715) do
 
   create_table "creators", force: :cascade do |t|
     t.string "first_name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_07_26_135403) do
   end
 
   create_table "gig_payments", force: :cascade do |t|
-    t.string "state", default: "pending"
+    t.string "state"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "gig_id", null: false
