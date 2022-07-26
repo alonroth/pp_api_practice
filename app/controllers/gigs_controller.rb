@@ -27,6 +27,10 @@ class GigsController < ApplicationController
 
   def update
     @gig = Gig.find(params[:id])
+
+    if params[:state] == 'complete' and @gig.state != 'complete'
+      render json: '', status: :bad_request unless @gig.may_complete?
+    end
     gig_update_response = @gig.update(gig_params_update)
     if gig_update_response
       render json: @gig, status: :ok, location: @gig
