@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_25_133528) do
+ActiveRecord::Schema.define(version: 2022_07_26_135403) do
 
   create_table "creators", force: :cascade do |t|
     t.string "first_name"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2022_07_25_133528) do
 
   create_table "gigs", force: :cascade do |t|
     t.string "brand_name"
-    t.string "state", default: "applied"
+    t.string "state"
     t.integer "creator_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -42,5 +42,5 @@ ActiveRecord::Schema.define(version: 2022_07_25_133528) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "gigs", "creators", primary_key: "id"
+  add_foreign_key "gigs", "creators"
 end
