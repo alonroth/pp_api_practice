@@ -47,3 +47,7 @@ gem 'whenever', require: false
 gem 'aasm'
 
 gem 'jwt'
+
+gem 'rack-attack'
+
+gem 'dalli'

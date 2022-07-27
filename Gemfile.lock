@@ -69,6 +69,7 @@ GEM
     chronic (0.10.2)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    dalli (3.2.2)
     erubi (1.10.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -96,6 +97,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-attack (6.6.1)
+      rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-test (2.0.2)
@@ -162,9 +165,11 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  dalli
   jwt
   listen (~> 3.2)
   puma (~> 4.1)
+  rack-attack
   rack-cors
   rails (~> 6.0.5, >= 6.0.5.1)
   spring
