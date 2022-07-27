@@ -1,3 +1,3 @@
-class GigPaymentSerializer < ActiveModel::Serializer
+class GigPaymentSerializer < ApplicationSerializer
   attributes :state
 end
