@@ -1,4 +1,5 @@
 class CreatorsController < ApplicationController
+  before_action :authorize_request
 
   def index
     creators_query_order =

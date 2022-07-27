@@ -46,3 +46,4 @@ gem 'whenever', require: false
 
 gem 'aasm'
 
+gem 'jwt'

@@ -1,4 +1,5 @@
 class GigsController < ApplicationController
+  before_action :authorize_request
 
   def index
     @gigs = Gig.find_by(gig_params_index)
