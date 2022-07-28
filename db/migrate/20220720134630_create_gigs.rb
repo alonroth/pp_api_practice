@@ -4,7 +4,6 @@ class CreateGigs < ActiveRecord::Migration[6.0]
       t.string :brand_name
       t.string :state
       t.belongs_to :creator, null: false, foreign_key: true
-      t.has_one :gig_payment, null: true, foreign_key: true
 
       t.timestamps
     end
