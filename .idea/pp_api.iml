@@ -50,6 +50,7 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.10, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dalli (v3.2.2, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.0, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.0.0, RVM: ruby-2.6.9) [gem]" level="application" />
@@ -78,6 +79,13 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fsevent (v0.11.1, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-inotify (v0.10.1, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec (v3.11.0, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.11.0, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.11.0, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.11.1, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v4.0.2, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.11.0, RVM: ruby-2.6.9) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="shoulda-matchers (v4.5.1, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v2.1.1, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring-watcher-listen (v2.0.1, RVM: ruby-2.6.9) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.1.1, RVM: ruby-2.6.9) [gem]" level="application" />
@@ -98,26 +106,80 @@
   <component name="RailsGeneratorsCache">
     <option name="generators">
       <list>
+        <option value="B" />
+        <option value="C" />
+        <option value="Default" />
+        <option value="FLEX_ERROR" />
+        <option value="G" />
+        <option value="J" />
+        <option value="M" />
+        <option value="O" />
+        <option value="P" />
+        <option value="S" />
+        <option value="T" />
+        <option value="The" />
         <option value="aasm" />
         <option value="active_record:aasm" />
         <option value="active_record:application_record" />
         <option value="active_record:migration" />
         <option value="active_record:model" />
+        <option value="api" />
         <option value="application_record" />
         <option value="channel" />
         <option value="controller" />
+        <option value="d" />
+        <option value="dev" />
+        <option value="directory" />
+        <option value="edge" />
+        <option value="f" />
         <option value="generator" />
+        <option value="h" />
         <option value="integration_test" />
         <option value="job" />
+        <option value="m" />
         <option value="mailbox" />
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:aasm" />
+        <option value="no-rc" />
+        <option value="p" />
+        <option value="q" />
+        <option value="r" />
+        <option value="rails" />
+        <option value="rc" />
         <option value="resource" />
+        <option value="rspec:channel" />
+        <option value="rspec:controller" />
+        <option value="rspec:feature" />
+        <option value="rspec:generator" />
+        <option value="rspec:helper" />
+        <option value="rspec:install" />
+        <option value="rspec:integration" />
+        <option value="rspec:job" />
+        <option value="rspec:mailbox" />
+        <option value="rspec:mailer" />
+        <option value="rspec:model" />
+        <option value="rspec:request" />
+        <option value="rspec:scaffold" />
+        <option value="rspec:system" />
+        <option value="rspec:view" />
+        <option value="s" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
         <option value="serializer" />
+        <option value="skip-action-mailbox" />
+        <option value="skip-action-text" />
+        <option value="skip-active-storage" />
+        <option value="skip-bootsnap" />
+        <option value="skip-gemfile" />
+        <option value="skip-keeps" />
+        <option value="skip-listen" />
+        <option value="skip-namespace" />
+        <option value="skip-spring" />
+        <option value="skip-system-test" />
+        <option value="skip-turbolinks" />
+        <option value="skip-webpack-install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
@@ -132,30 +194,86 @@
         <option value="test_unit:plugin" />
         <option value="test_unit:scaffold" />
         <option value="test_unit:system" />
+        <option value="v" />
+        <option value="webpacker" />
       </list>
     </option>
     <option name="myGenerators">
       <list>
+        <option value="B" />
+        <option value="C" />
+        <option value="Default" />
+        <option value="FLEX_ERROR" />
+        <option value="G" />
+        <option value="J" />
+        <option value="M" />
+        <option value="O" />
+        <option value="P" />
+        <option value="S" />
+        <option value="T" />
+        <option value="The" />
         <option value="aasm" />
         <option value="active_record:aasm" />
         <option value="active_record:application_record" />
         <option value="active_record:migration" />
         <option value="active_record:model" />
+        <option value="api" />
         <option value="application_record" />
         <option value="channel" />
         <option value="controller" />
+        <option value="d" />
+        <option value="dev" />
+        <option value="directory" />
+        <option value="edge" />
+        <option value="f" />
         <option value="generator" />
+        <option value="h" />
         <option value="integration_test" />
         <option value="job" />
+        <option value="m" />
         <option value="mailbox" />
         <option value="mailer" />
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:aasm" />
+        <option value="no-rc" />
+        <option value="p" />
+        <option value="q" />
+        <option value="r" />
+        <option value="rails" />
+        <option value="rc" />
         <option value="resource" />
+        <option value="rspec:channel" />
+        <option value="rspec:controller" />
+        <option value="rspec:feature" />
+        <option value="rspec:generator" />
+        <option value="rspec:helper" />
+        <option value="rspec:install" />
+        <option value="rspec:integration" />
+        <option value="rspec:job" />
+        <option value="rspec:mailbox" />
+        <option value="rspec:mailer" />
+        <option value="rspec:model" />
+        <option value="rspec:request" />
+        <option value="rspec:scaffold" />
+        <option value="rspec:system" />
+        <option value="rspec:view" />
+        <option value="s" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
         <option value="serializer" />
+        <option value="skip-action-mailbox" />
+        <option value="skip-action-text" />
+        <option value="skip-active-storage" />
+        <option value="skip-bootsnap" />
+        <option value="skip-gemfile" />
+        <option value="skip-keeps" />
+        <option value="skip-listen" />
+        <option value="skip-namespace" />
+        <option value="skip-spring" />
+        <option value="skip-system-test" />
+        <option value="skip-turbolinks" />
+        <option value="skip-webpack-install" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
@@ -170,6 +288,8 @@
         <option value="test_unit:plugin" />
         <option value="test_unit:scaffold" />
         <option value="test_unit:system" />
+        <option value="v" />
+        <option value="webpacker" />
       </list>
     </option>
   </component>
@@ -340,6 +460,14 @@
           <RakeTaskImpl description="Prints out your Rack middleware stack" fullCommand="middleware" id="middleware" />
           <RakeTaskImpl description="Restart app by touching tmp/restart.txt" fullCommand="restart" id="restart" />
           <RakeTaskImpl description="Generate a cryptographically secure secret key (this is typically used to generate a secret for cookie sessions)" fullCommand="secret" id="secret" />
+          <RakeTaskImpl description="Run all specs in spec directory (excluding plugin specs)" fullCommand="spec" id="spec" />
+          <RakeTaskImpl id="spec">
+            <subtasks>
+              <RakeTaskImpl description="Run the code examples in spec/requests" fullCommand="spec:requests" id="requests" />
+              <RakeTaskImpl description="" fullCommand="spec:prepare" id="prepare" />
+              <RakeTaskImpl description="" fullCommand="spec:statsetup" id="statsetup" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
           <RakeTaskImpl description="Runs all tests in test folder except system ones" fullCommand="test" id="test" />
           <RakeTaskImpl id="test">
