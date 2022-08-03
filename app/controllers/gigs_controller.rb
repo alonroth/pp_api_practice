@@ -31,14 +31,21 @@ class GigsController < ApplicationController
   def update
     @gig = Gig.find(params[:id])
 
-    if gig_params_update[:state] == 'complete'
-      @gig.complete!
-    end
-    gig_update_response = @gig.update(gig_params_update.except('state'))
-    if gig_update_response
-      render json: @gig, status: :ok, location: @gig
-    else
-      render @gig.errors, status: :unprocessable_entity
+    #QUESTION: pretty sure it's not the right way to handle rollbacks in ActiveModel / AASM
+    ActiveRecord::Base.transaction do
+      begin
+        @gig.update!(gig_params_update.except('state'))
+        if gig_params_update[:state] == 'completed'
+          @gig.complete!
+        end
+      rescue AASM::InvalidTransition
+        render json: { 'state': ['can\'t transition gig from ' + @gig.state + ' to ' + gig_params_update[:state]] }, status: :bad_request
+        fail(ActiveRecord::Rollback)
+      rescue ActiveRecord::RecordInvalid
+        render json: @gig.errors, status: :bad_request
+        fail(ActiveRecord::Rollback)
+      end
+        render json: @gig, status: :ok, location: @gig
     end
   end
 
