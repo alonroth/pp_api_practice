@@ -2,6 +2,8 @@ class CreatorsController < ApplicationController
   before_action :authorize_request
 
   def index
+    # QUESTION: I read that Rails usually don't validate controller params, validation happens only in the model level
+    # but what is the best practice for validate a param input that it's not sent for the model like here?
     creators_query_order =
       if params.key?('sort') & params.key?('sort_direction')
         {params[:sort] => params[:sort_direction].to_sym}

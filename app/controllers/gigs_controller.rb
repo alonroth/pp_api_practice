@@ -31,7 +31,7 @@ class GigsController < ApplicationController
   def update
     @gig = Gig.find(params[:id])
 
-    #QUESTION: pretty sure it's not the right way to handle rollbacks in ActiveModel / AASM
+    # QUESTION: is it a better way to implement transaction/rollback with error handling?
     ActiveRecord::Base.transaction do
       begin
         @gig.update!(gig_params_update.except('state'))
